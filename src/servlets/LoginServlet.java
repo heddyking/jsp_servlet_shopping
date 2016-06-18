@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import bean.DB;
 import bean.Tools;
 
 import java.sql.*;
@@ -48,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 		//初始化所有数据库必要信息
 		String url="jdbc:mysql://localhost:3306/class";
 		String user="root";
-		String pass="admin";
+		String pass=DB.password;
 		String sql="select * from user where username='"+username+"' and userpass='"+userpass+"'";
 		Connection conn=null;//DriverManager.getConnection(url,user,pass);
 		Statement stmt=null;

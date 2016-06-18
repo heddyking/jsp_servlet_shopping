@@ -50,6 +50,7 @@ public class ProcessCart extends HttpServlet {
 			request.setAttribute("info","É¾³ý³É¹¦£¡");
 		}
 		session.setAttribute("cart",cartManager.getCart());
+		session.setAttribute("total", cartManager.totalPrice());
 		RequestDispatcher rd=request.getRequestDispatcher("cart.jsp");
 		rd.forward(request,response);
 		

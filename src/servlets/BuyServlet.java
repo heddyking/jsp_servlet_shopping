@@ -98,6 +98,7 @@ public class BuyServlet extends HttpServlet {
 		if(mark)
 		{
 			session.setAttribute("cart", null);
+			session.setAttribute("total", 0);
 			response.sendRedirect("userinfo.jsp");
 		}
 		else

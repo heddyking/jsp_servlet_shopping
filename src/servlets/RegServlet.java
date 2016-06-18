@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import bean.DB;
 import bean.Tools;
 import java.sql.*;
 
@@ -46,7 +47,7 @@ public class RegServlet extends HttpServlet {
 		//初始化所有的数据库连接的变量
 		String url="jdbc:mysql://localhost:3306/class";
 		String user="root";
-		String password="admin";
+		String password=DB.password;
 		String sql="select * from user where username='"+username+"'"; //省略号表示要输入具体的sql语句
 		//System.out.println(sql);
 		//创建各个对象

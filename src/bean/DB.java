@@ -8,10 +8,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DB {
+	public static String password="123456";
+	
 	private String classname="com.mysql.jdbc.Driver";	//数据库驱动类路径
 	private String url="jdbc:mysql://localhost:3306/class"; //数据库URL
 	private String user="root";	//登录数据库的用户名
-	private String pwd="admin";	//登录数据库的密码
+	private String pwd=DB.password;	//登录数据库的密码
 	
 	private Connection conn=null;	//申明一个Connection对象
 	private Statement stmt=null; //声明一个Statement对象
